@@ -1,0 +1,123 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+:root{
+    --logo-font:'Lobster', cursive;
+    --nav-hover: slategrey;
+    --default-cursor: pointer;
+}
+
+/*Navigation Bar*/
+
+  nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    padding: 0.75rem 2rem;
+    background: var(--offWhite);
+    z-index: 1;
+    background: antiquewhite;
+  }
+.nav-header  a{
+      text-decoration: none;
+      font-size: 2rem;
+      color: black;
+  }
+ .nav-center{
+     margin-top: 1rem;
+ }
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+.nav-button{
+    align-self: right;
+    padding:0;
+    margin-right: 2rem;
+    background: transparent;
+    height: 2rem;
+}
+.nav-icon{
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+.nav-links{
+    height: 0;
+    overflow: hidden;
+    list-style-type: none;
+    transition: all 0.3s linear;
+    font-size: 1.5rem;
+}
+.nav-links a{
+    display: block;
+    text-decoration: underline;
+    font-family: var(--logo-font);
+    margin: 0.75rem;
+    padding-right: 5rem;
+    transition: all 0.3s linear;
+    color: black;
+    text-align: center;
+}
+.nav-links a:hover{
+    color:var(--nav-hover);
+    cursor: var(--default-cursor);
+}
+.logo-title{
+    font-family: var(--logo-font);
+    text-decoration:underline;
+}
+.logo-title:hover{
+    color:var(--nav-hover);
+    cursor: var(--default-cursor)
+    
+}
+
+/*Hero Image*/
+.deafault-hero{
+    background-image: './images/Beach-hut.jpg' center/cover no-repeat;
+}
+.show-nav {
+    display: contents;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+@media(max-width:800px){
+   .nav-button{
+       display: none;
+   }
+   .nav-center{
+
+   }
+   .nav-links{
+      height: auto;
+      display: flex;
+   }
+   .nav-links a {
+
+   }
+}

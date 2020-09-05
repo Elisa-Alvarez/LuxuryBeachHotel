@@ -1,10 +1,8 @@
 import React from 'react';
+import Hero from './Hero'
 
 export default function Home (){
     return(
-        <div className="home-container">
-            <h1>Luxury Hotels Home</h1>
-
-        </div>
+    <Hero hero="deafault-hero"/>
     )
 }

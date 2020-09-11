@@ -1,10 +1,13 @@
 import React from 'react';
-
+import Hero from './Hero'
+import Banner from './Banner';
 const Room = () => {
     return (
-        <div className="room-container">
-         <h1>Rooms Availble</h1>
-        </div>
+        <>
+          <Hero hero="room-hero">
+              <Banner></Banner>
+          </Hero>
+        </>
     )
 }
 

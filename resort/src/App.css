@@ -1,28 +1,13 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
 
 :root{
     --logo-font:'Lobster', cursive;
     --nav-hover: slategrey;
     --default-cursor: pointer;
+    --main-color:antiquewhite;
+}
+.App{
+   
+    box-sizing: border-box;
 }
 
 /*Navigation Bar*/
@@ -32,11 +17,10 @@ time, mark, audio, video {
     top: 0;
     left: 0;
     width: 100%;
-    height: 15vh;
+    height: 10vh;
     padding: 0.75rem 2rem;
-    background: var(--offWhite);
     z-index: 1;
-    background: antiquewhite;
+    background:var(--main-color);
   }
 .nav-header  a{
       text-decoration: none;
@@ -65,6 +49,9 @@ time, mark, audio, video {
 
 .nav-links{
     height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     list-style-type: none;
     transition: all 0.3s linear;
@@ -76,7 +63,7 @@ time, mark, audio, video {
     font-family: var(--logo-font);
     margin: 0.75rem;
     padding-right: 5rem;
-    transition: all 0.3s linear;
+    transition: all 0.6s linear;
     color: black;
     text-align: center;
 }
@@ -94,30 +81,139 @@ time, mark, audio, video {
     
 }
 
-/*Hero Image*/
-.deafault-hero{
-    background-image: './images/Beach-hut.jpg' center/cover no-repeat;
-}
 .show-nav {
     display: contents;
-    height: 100px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+/*Media Quieries for tablet - 300px width phone*/
 
-@media(max-width:800px){
-   .nav-button{
+@media screen and (max-width:800px){
+   button.nav-button{
        display: none;
    }
    .nav-center{
-
+      display: flex;
+     
+      
+   }
+   .nav-header{
+       width: 45%;
    }
    .nav-links{
       height: auto;
       display: flex;
-   }
-   .nav-links a {
+      justify-items: right;
 
    }
+  
 }
+
+@media screen and (max-width:500px){
+    .nav-header a{
+        margin-top: 0.5rem;
+        font-size: 1.8rem;
+    }
+    .nav-links a{
+       padding:0;
+    }
+}
+
+@media screen and (max-width:350px){
+    .main-nav{
+        padding:0.5rem;
+        height: 9vh;
+    }
+    .nav-center{
+        width: 100%;
+        justify-content: center;
+    }
+    .nav-header{
+        width: 48%;
+        align-self: left;
+    }
+    .nav-header a{
+        margin-top:0;
+        font-size: 1.58rem;
+        padding-right: 0.5rem;
+    }
+    .nav-links a{
+        margin:0;
+        padding: 0.4rem;
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width:300px){
+    .nav-header a{
+        margin-top: 0.24rem;
+        font-size: 1.3rem;
+    }
+    .nav-links a{
+        font-size: 1.2rem;
+    }
+}
+/*Hero Image*/
+
+header.error-hero, .room-hero{
+    position: relative;
+    min-height: 100vh;
+    background: url('./images/Beach-hut.jpg') center/cover no-repeat ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header.room-hero{
+    min-height: 70vh;
+    background: url('https://images.unsplash.com/flagged/photo-1556438758-8d49568ce18e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80') center/cover no-repeat;
+  
+    
+}
+
+/*Banner*/
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    justify-content: space-evenly;
+    text-align: center;
+    width:50%;
+    height: 50vh;
+    background: rgba(24, 171, 179, 0.71);
+    padding: 1.8rem;
+    
+}
+
+.banner h1{
+    margin-top: 1rem;
+    font-size: 5rem;
+    font-weight: 200;
+    color:var(--main-color);
+}
+
+.banner p {
+ font-size: 2rem;
+ color:var(--main-color);
+}
+
+.banner .home-btn{
+    background:var(--main-color) ;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+}
+.banner .home-btn:hover{
+  background: rgba(169, 180, 190, 0.71);
+}
+
+.banner a{
+    text-decoration:none;
+}
+
+/*Room Banner*/
+
+.room-hero .banner{
+    margin-top: 6rem;
+}
+

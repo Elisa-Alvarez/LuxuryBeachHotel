@@ -1,10 +1,10 @@
 import React from 'react';
+import Hero from './Hero'
 
 export default function Error(){
   return(
-      <div className="error container">
-          <h1>404 Page Not Found</h1>
-
-      </div>
+      <>
+      <Hero hero="error-hero" />
+      </>
   )
 }

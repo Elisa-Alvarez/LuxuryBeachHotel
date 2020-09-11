@@ -1,21 +1,24 @@
-import React from 'react';
-import './App.css';
-import{Route, Switch, Link} from 'react-router-dom'
-import Home from './components/Home'
-import Room from './components/Room'
-import SingleRooms from './components/SingleRooms'
-import Error from './components/Error'
-import NavBar from './components/NavBar';
+import React from "react";
+import "./App.css";
+
+import Home from "./components/Home";
+import Rooms from "./components/Room";
+import SingleRooms from "./components/SingleRooms";
+import Error from "./components/Error";
+
+import Navbar from "./components/NavBar";
+
+import { Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-       <NavBar></NavBar>
+      <Navbar />
       <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/rooms" component={Room}/>
-        <Route exact path="/rooms/:single" component={SingleRooms} />
-        <Route component={Error}/>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/rooms" component={Rooms} />
+        <Route exact path="/rooms/:slug" component={SingleRooms} />
+        <Route component={Error} />
       </Switch>
     </div>
   );

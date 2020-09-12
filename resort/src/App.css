@@ -1,28 +1,14 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
 
 :root{
     --logo-font:'Lobster', cursive;
     --nav-hover: slategrey;
     --default-cursor: pointer;
+    --main-color:antiquewhite;
+    --button-text: darkslategray;
+}
+.App{
+   
+    box-sizing: border-box;
 }
 
 /*Navigation Bar*/
@@ -32,11 +18,10 @@ time, mark, audio, video {
     top: 0;
     left: 0;
     width: 100%;
-    height: 15vh;
+    height: 10vh;
     padding: 0.75rem 2rem;
-    background: var(--offWhite);
     z-index: 1;
-    background: antiquewhite;
+    background:var(--main-color);
   }
 .nav-header  a{
       text-decoration: none;
@@ -65,6 +50,9 @@ time, mark, audio, video {
 
 .nav-links{
     height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     list-style-type: none;
     transition: all 0.3s linear;
@@ -76,7 +64,7 @@ time, mark, audio, video {
     font-family: var(--logo-font);
     margin: 0.75rem;
     padding-right: 5rem;
-    transition: all 0.3s linear;
+    transition: all 0.6s linear;
     color: black;
     text-align: center;
 }
@@ -94,30 +82,332 @@ time, mark, audio, video {
     
 }
 
-/*Hero Image*/
-.deafault-hero{
-    background-image: './images/Beach-hut.jpg' center/cover no-repeat;
-}
 .show-nav {
     display: contents;
-    height: 100px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+/*Media Quieries for tablet - 300px width phone*/
+@media screen and (max-width:1024px)
+{
+    .logo-title{
+        font-size: 3rem;
 
-@media(max-width:800px){
-   .nav-button{
+    }
+    .nav-header button{
+        width: 20%;
+        height: 6.5vh;
+    }
+    .nav-icon{
+        height: 15vh;
+    }
+    .nav-links{
+        font-size: 2rem;
+    }
+    .show-nav {
+        height: 25px;
+      
+      }
+}
+@media screen and (max-width:800px){
+   button.nav-button{
        display: none;
    }
    .nav-center{
-
+      display: flex;
+     
+      
+   }
+   .nav-header{
+       width: 45%;
    }
    .nav-links{
       height: auto;
       display: flex;
-   }
-   .nav-links a {
+      justify-items: right;
 
    }
+  
+}
+
+@media screen and (max-width:550px){
+    .nav-header a{
+        margin-top: 0.5rem;
+        font-size: 1.8rem;
+    }
+    .nav-links a{
+       padding:0;
+    }
+    .logo-title{
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width:420px){
+    .main-nav{
+        padding:0.5rem;
+        height: 9vh;
+    }
+    .nav-center{
+        width: 100%;
+        justify-content: center;
+    }
+    .nav-header{
+        width: 48%;
+        align-self: left;
+    }
+    .nav-header a{
+        margin-top:0;
+        font-size: 1.58rem;
+        padding-right: 0.5rem;
+    }
+    .nav-links a{
+        margin:0;
+        padding: 0.4rem;
+        font-size: 1.4rem;
+    }
+    .logo-title{
+        font-size: 1.9rem;
+    }
+}
+@media screen and (max-width:375px){
+    .nav-header a{
+        margin-top: 0.24rem;
+        font-size: 1.3rem;
+    }
+    .nav-links a{
+        font-size: 1.2rem;
+    }
+    .logo-title{
+        font-size: 1.3rem;
+    }
+}
+
+/*Hero Image*/
+
+header.error-hero, .room-hero{
+    position: relative;
+    min-height: 100vh;
+    background: url('./images/Beach-hut.jpg') center/cover no-repeat ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header.room-hero{
+    min-height: 70vh;
+    background: url('https://images.unsplash.com/flagged/photo-1556438758-8d49568ce18e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80') center/cover no-repeat;
+  
+    
+}
+@media screen and (max-width:1030px){
+    header.error-hero, .room-hero{
+        min-height: 70vh;
+    }
+}
+
+@media screen and (max-width:800px){
+    header.error-hero, .room-hero{
+        min-height: 70vh;
+    }
+}
+@media screen and (max-width:380px){
+    header.error-hero,.room-hero{
+        min-height: 60vh;
+    }
+}
+
+/*Banner*/
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    justify-content: space-evenly;
+    text-align: center;
+    width:50%;
+    height: 50vh;
+    background: rgba(24, 171, 179, 0.71);
+    padding: 1.8rem;
+    
+    
+}
+
+.banner div {
+    width: 50%;
+    height: 5px;
+    background: var(--main-color);
+    margin: 1.7rem auto;
+  }  
+
+.banner h1{
+    margin-top: 0.5rem;
+    font-size: 5rem;
+    font-weight: 200;
+    color:var(--main-color);
+   
+}
+
+.banner p {
+ font-size: 2rem;
+ color:var(--main-color);
+}
+
+.banner .home-btn{
+    background: rgb(211, 209, 183);
+    border: 3px solid white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+    color: var(--button-text)
+}
+.banner .home-btn:hover{
+  background: rgba(0, 0, 0, 0.71);
+  color: white;
+}
+
+.banner a{
+    text-decoration:none;
+}
+
+/*Room Banner*/
+
+.room-hero .banner{
+    margin-top: 6rem;
+    padding:0;
+    background: rgba(65, 65, 65, 0.521);
+    display: flex;
+    align-content: center;
+}
+
+.room-hero .banner h1{
+  width: 50%;
+  align-self: center;
+}
+@media screen and (max-width:1024px ){
+    .banner{
+        height: 30vh;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:800px)
+{
+    .banner{
+        width: 60%;
+        height: 30vh;
+    }
+    .banner h1{
+        margin-top: 0.5rem;
+        font-size: 4rem;
+        font-weight: 200;
+        color:var(--main-color);
+       
+    }
+}
+
+@media screen and (max-width:600px){
+    
+    .banner h1{
+     font-size: 3rem;
+       
+    }
+    .banner p{
+        font-size: 1.25rem;
+    }
+}
+@media screen and (max-width:420px){
+    .banner h1{
+      font-size: 2rem;
+    }
+    .banner p{
+        font-size: 1rem;
+    }
+    .banner a{
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width:380px){
+    .banner{
+        height:18vh;
+    }
+    .room-hero{
+        height: 20vh;
+    }
+
+    .banner div {
+        width: 50%;
+        height: 1px;
+        border-bottom: 2px solid var(--main-color);
+        margin: 0.1rem auto;
+      }
+    .room-hero .banner div{
+      height: 2px;
+    }
+
+    .banner h1{
+        font-size: 1.5rem;
+    }
+
+    .banner p{
+        margin-top: 1rem;
+        font-size: 0.75rem;
+    }
+    
+.banner .home-btn{
+height: 3vh;
+font-size: 0.75rem;
+}
+}
+
+
+
+/*Services*/
+
+.title-container h4{
+    margin-top: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 3rem;
+}
+
+.title-container div {
+    width: 50%;
+    height: 5px;
+    background: var(--main-color);
+    margin: 1.7rem auto;
+  } 
+
+.services-center {
+    display: flex;
+}
+
+.services-center div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+}
+
+.services-center div h5{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+    border-bottom: 0.2rem solid var(--main-color);
+}
+
+.service-info{
+    width: 50%;
+}
+
+@media screen and (max-width:800px){
+    div.services-center{
+        display: flex;
+        flex-wrap:wrap;
+        align-content: center;
+    }
+    .services-center div{
+        width: 100%;
+    }
 }

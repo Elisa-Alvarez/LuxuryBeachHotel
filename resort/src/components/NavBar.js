@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-//import logo from '../images'
 import {FaBars} from 'react-icons/fa'
 import {Button} from '@material-ui/core'
 import {Link} from 'react-router-dom'

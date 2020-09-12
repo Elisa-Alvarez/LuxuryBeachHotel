@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 
-import Home from "./components/Home";
-import Rooms from "./components/Room";
-import SingleRooms from "./components/SingleRooms";
+import Home from "./Pages/Home";
+import Rooms from "./Pages/Room";
+import SingleRooms from "./Pages/SingleRooms";
 import Error from "./components/Error";
 
 import Navbar from "./components/NavBar";

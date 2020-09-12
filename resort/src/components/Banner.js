@@ -5,9 +5,11 @@ function Banner ({title,subtitle,children}){
         
         <div className="banner">
             <h1>{title}</h1>
-            <p>{subtitle}</p>
+            <div />
+              <p>{subtitle}</p>
                {children}
         </div>
+        
         
     )
 }

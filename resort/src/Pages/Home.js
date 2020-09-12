@@ -1,8 +1,9 @@
 import React from 'react';
-import Hero from './Hero'
-import Banner from './Banner'
+import Hero from '../components/Hero'
+import Banner from '../components/Banner'
 import {Link} from 'react-router-dom'
 import { Button } from '@material-ui/core';
+import Services from '../components/Services';
 
 function Home (){
     return(
@@ -12,6 +13,7 @@ function Home (){
                  <Link to="/rooms"><Button variant="outlined" className="home-btn">Learn More...</Button></Link>
            </Banner>
           </Hero>
+          <Services/>
        </div>
     
     )

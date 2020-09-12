@@ -4,6 +4,7 @@
     --nav-hover: slategrey;
     --default-cursor: pointer;
     --main-color:antiquewhite;
+    --button-text: darkslategray;
 }
 .App{
    
@@ -89,7 +90,27 @@
     align-items: center;
   }
 /*Media Quieries for tablet - 300px width phone*/
+@media screen and (max-width:1024px)
+{
+    .logo-title{
+        font-size: 3rem;
 
+    }
+    .nav-header button{
+        width: 20%;
+        height: 6.5vh;
+    }
+    .nav-icon{
+        height: 15vh;
+    }
+    .nav-links{
+        font-size: 2rem;
+    }
+    .show-nav {
+        height: 25px;
+      
+      }
+}
 @media screen and (max-width:800px){
    button.nav-button{
        display: none;
@@ -111,7 +132,7 @@
   
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:550px){
     .nav-header a{
         margin-top: 0.5rem;
         font-size: 1.8rem;
@@ -119,9 +140,12 @@
     .nav-links a{
        padding:0;
     }
+    .logo-title{
+        font-size: 2.2rem;
+    }
 }
 
-@media screen and (max-width:350px){
+@media screen and (max-width:420px){
     .main-nav{
         padding:0.5rem;
         height: 9vh;
@@ -144,8 +168,11 @@
         padding: 0.4rem;
         font-size: 1.4rem;
     }
+    .logo-title{
+        font-size: 1.9rem;
+    }
 }
-@media screen and (max-width:300px){
+@media screen and (max-width:375px){
     .nav-header a{
         margin-top: 0.24rem;
         font-size: 1.3rem;
@@ -153,7 +180,11 @@
     .nav-links a{
         font-size: 1.2rem;
     }
+    .logo-title{
+        font-size: 1.3rem;
+    }
 }
+
 /*Hero Image*/
 
 header.error-hero, .room-hero{
@@ -171,6 +202,22 @@ header.room-hero{
   
     
 }
+@media screen and (max-width:1030px){
+    header.error-hero, .room-hero{
+        min-height: 70vh;
+    }
+}
+
+@media screen and (max-width:800px){
+    header.error-hero, .room-hero{
+        min-height: 70vh;
+    }
+}
+@media screen and (max-width:380px){
+    header.error-hero,.room-hero{
+        min-height: 60vh;
+    }
+}
 
 /*Banner*/
 
@@ -185,13 +232,22 @@ header.room-hero{
     background: rgba(24, 171, 179, 0.71);
     padding: 1.8rem;
     
+    
 }
 
+.banner div {
+    width: 50%;
+    height: 5px;
+    background: var(--main-color);
+    margin: 1.7rem auto;
+  }  
+
 .banner h1{
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     font-size: 5rem;
     font-weight: 200;
     color:var(--main-color);
+   
 }
 
 .banner p {
@@ -200,11 +256,14 @@ header.room-hero{
 }
 
 .banner .home-btn{
-    background:var(--main-color) ;
+    background: rgb(211, 209, 183);
+    border: 3px solid white;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+    color: var(--button-text)
 }
 .banner .home-btn:hover{
-  background: rgba(169, 180, 190, 0.71);
+  background: rgba(0, 0, 0, 0.71);
+  color: white;
 }
 
 .banner a{
@@ -215,5 +274,140 @@ header.room-hero{
 
 .room-hero .banner{
     margin-top: 6rem;
+    padding:0;
+    background: rgba(65, 65, 65, 0.521);
+    display: flex;
+    align-content: center;
 }
 
+.room-hero .banner h1{
+  width: 50%;
+  align-self: center;
+}
+@media screen and (max-width:1024px ){
+    .banner{
+        height: 30vh;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:800px)
+{
+    .banner{
+        width: 60%;
+        height: 30vh;
+    }
+    .banner h1{
+        margin-top: 0.5rem;
+        font-size: 4rem;
+        font-weight: 200;
+        color:var(--main-color);
+       
+    }
+}
+
+@media screen and (max-width:600px){
+    
+    .banner h1{
+     font-size: 3rem;
+       
+    }
+    .banner p{
+        font-size: 1.25rem;
+    }
+}
+@media screen and (max-width:420px){
+    .banner h1{
+      font-size: 2rem;
+    }
+    .banner p{
+        font-size: 1rem;
+    }
+    .banner a{
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width:380px){
+    .banner{
+        height:18vh;
+    }
+    .room-hero{
+        height: 20vh;
+    }
+
+    .banner div {
+        width: 50%;
+        height: 1px;
+        border-bottom: 2px solid var(--main-color);
+        margin: 0.1rem auto;
+      }
+    .room-hero .banner div{
+      height: 2px;
+    }
+
+    .banner h1{
+        font-size: 1.5rem;
+    }
+
+    .banner p{
+        margin-top: 1rem;
+        font-size: 0.75rem;
+    }
+    
+.banner .home-btn{
+height: 3vh;
+font-size: 0.75rem;
+}
+}
+
+
+
+/*Services*/
+
+.title-container h4{
+    margin-top: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 3rem;
+}
+
+.title-container div {
+    width: 50%;
+    height: 5px;
+    background: var(--main-color);
+    margin: 1.7rem auto;
+  } 
+
+.services-center {
+    display: flex;
+}
+
+.services-center div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 1rem;
+}
+
+.services-center div h5{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+    border-bottom: 0.2rem solid var(--main-color);
+}
+
+.service-info{
+    width: 50%;
+}
+
+@media screen and (max-width:800px){
+    div.services-center{
+        display: flex;
+        flex-wrap:wrap;
+        align-content: center;
+    }
+    .services-center div{
+        width: 100%;
+    }
+}

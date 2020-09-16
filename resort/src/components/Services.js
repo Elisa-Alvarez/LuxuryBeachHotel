@@ -1,5 +1,5 @@
 import React from 'react'
-import Title from './Tile'
+import Title from './Title'
 import{FaCocktail,FaHiking,FaWifi,FaBowlingBall} from 'react-icons/fa'
  const service =[
       {

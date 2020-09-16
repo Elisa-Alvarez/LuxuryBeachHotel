@@ -3,6 +3,7 @@ import Hero from '../components/Hero'
 import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
 import {Button} from '@material-ui/core'
+import SearchContainer from '../components/SearchContainer'
 const Room = () => {
     return (
         <>
@@ -13,6 +14,7 @@ const Room = () => {
                   </Link>
               </Banner>
           </Hero>
+          <SearchContainer />
         </>
     )
 }

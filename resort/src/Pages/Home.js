@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero'
 import Banner from '../components/Banner'
+import Featured from '../components/FeaturedRooms'
 import {Link} from 'react-router-dom'
 import { Button } from '@material-ui/core';
 import Services from '../components/Services';
@@ -14,6 +15,7 @@ function Home (){
            </Banner>
           </Hero>
           <Services/>
+          <Featured />
        </div>
     
     )

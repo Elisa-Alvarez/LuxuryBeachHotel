@@ -9,7 +9,7 @@ Made a clone beach hotel website original concept creator https://github.com/joh
 
 ### Room Data
 
-All the Room data comes from the service contentful and was hand made for this project.
+All the Room data comes from the service contentful and was hand made for this project. Currently there are only 3 rooms 2 single and one double and all of them need more styling and better images added.
 
 ### For Future Updates
 

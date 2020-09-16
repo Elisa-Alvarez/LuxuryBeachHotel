@@ -12,9 +12,9 @@ return (
     <section className="sorted-rooms">
         <div className="room-list">
             {
-                rooms.map((room)=>{
+                rooms.map((room=>{
                     return <RoomType key={room.id}  room={room} />
-                })
+                }))
             }
         </div>
     </section>

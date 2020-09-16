@@ -10,7 +10,7 @@ const getUnique = (items, value) => {
 
      const context = useContext(RoomContext);
      const {
-       handleChange,
+       onChange,
        type,
        capacity,
        price,
@@ -46,7 +46,7 @@ const getUnique = (items, value) => {
              <select
                name="type"
                id="type"
-               onChange={handleChange}
+               onChange={onChange}
                className="form-control"
                value={type}
              >
@@ -60,7 +60,7 @@ const getUnique = (items, value) => {
              <select
                name="capacity"
                id="capacity"
-               onChange={handleChange}
+               onChange={onChange}
                className="form-control"
                value={capacity}
              >
@@ -78,7 +78,7 @@ const getUnique = (items, value) => {
                max={maxPrice}
                id="price"
                value={price}
-               onChange={handleChange}
+               onChange={onChange}
                className="form-control"
              />
            </div>
@@ -91,14 +91,14 @@ const getUnique = (items, value) => {
                  type="number"
                  name="minSize"
                  value={minSize}
-                 onChange={handleChange}
+                 onChange={onChange}
                  className="size-input"
                />
                <input
                  type="number"
                  name="maxSize"
                  value={maxSize}
-                 onChange={handleChange}
+                 onChange={onChange}
                  className="size-input"
                />
              </div>
@@ -112,7 +112,7 @@ const getUnique = (items, value) => {
                  name="breakfast"
                  id="breakfast"
                  checked={breakfast}
-                 onChange={handleChange}
+                 onChange={onChange}
                />
                <label htmlFor="breakfast">breakfast</label>
              </div>
@@ -121,7 +121,7 @@ const getUnique = (items, value) => {
                  type="checkbox"
                  name="pets"
                  checked={pets}
-                 onChange={handleChange}
+                 onChange={onChange}
                />
                <label htmlFor="breakfast">pets</label>
              </div>

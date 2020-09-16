@@ -5,6 +5,7 @@
     --default-cursor: pointer;
     --main-color:antiquewhite;
     --button-text: darkslategray;
+    --baner-background:rgba(24, 171, 179, 0.71);
 }
 .App{
    
@@ -18,7 +19,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 10vh;
+    height: 13vh;
     padding: 0.75rem 2rem;
     z-index: 1;
     background:var(--main-color);
@@ -84,7 +85,8 @@
 
 .show-nav {
     display: contents;
-    height: 20px;
+    height: 25px;
+    margin-bottom: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,7 +199,7 @@ header.error-hero, .room-hero{
 }
 
 header.room-hero{
-    min-height: 70vh;
+    min-height: 80vh;
     background: url('https://images.unsplash.com/flagged/photo-1556438758-8d49568ce18e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80') center/cover no-repeat;
   
     
@@ -229,7 +231,7 @@ header.room-hero{
     text-align: center;
     width:50%;
     height: 50vh;
-    background: rgba(24, 171, 179, 0.71);
+    background: var(--baner-background);
     padding: 1.8rem;
     
     
@@ -244,7 +246,7 @@ header.room-hero{
 
 .banner h1{
     margin-top: 0.5rem;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 200;
     color:var(--main-color);
    
@@ -258,6 +260,7 @@ header.room-hero{
 .banner .home-btn{
     background: rgb(211, 209, 183);
     border: 3px solid white;
+    width: fit-content;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
     color: var(--button-text)
 }
@@ -275,7 +278,7 @@ header.room-hero{
 .room-hero .banner{
     margin-top: 6rem;
     padding:0;
-    background: rgba(65, 65, 65, 0.521);
+    background:var(--baner-background);
     display: flex;
     align-content: center;
 }
@@ -285,7 +288,7 @@ header.room-hero{
   align-self: center;
 }
 @media screen and (max-width:1024px ){
-    .banner{
+    .banner, .room-hero .banner{
         height: 30vh;
         width: 60%;
     }
@@ -293,16 +296,22 @@ header.room-hero{
 
 @media screen and (max-width:800px)
 {
-    .banner{
-        width: 60%;
-        height: 30vh;
-    }
+
     .banner h1{
         margin-top: 0.5rem;
-        font-size: 4rem;
+        font-size: 3.5rem;
         font-weight: 200;
         color:var(--main-color);
        
+    }
+    /*Room Hero Banner*/
+    .room-hero .banner, .banner{
+        width: 60%;
+        height: 30vh;
+    }
+    .room-hero .banner h1{
+        font-size: 4.8rem;
+        width: fit-content;
     }
 }
 
@@ -328,23 +337,11 @@ header.room-hero{
     }
 }
 @media screen and (max-width:380px){
+   /*Proper Indentation*/
     .banner{
         height:18vh;
     }
-    .room-hero{
-        height: 20vh;
-    }
-
-    .banner div {
-        width: 50%;
-        height: 1px;
-        border-bottom: 2px solid var(--main-color);
-        margin: 0.1rem auto;
-      }
-    .room-hero .banner div{
-      height: 2px;
-    }
-
+ 
     .banner h1{
         font-size: 1.5rem;
     }
@@ -354,10 +351,28 @@ header.room-hero{
         font-size: 0.75rem;
     }
     
-.banner .home-btn{
-height: 3vh;
-font-size: 0.75rem;
-}
+    .banner .home-btn{
+    height: 3vh;
+    font-size: 0.75rem;
+    }
+    .room-hero{
+        height: 20vh;
+    }
+
+   .room-hero .banner div, .banner div {
+        width: 50%;
+        height: 1px;
+        border-bottom: 2px solid var(--main-color);
+        margin: 0.1rem auto;
+      }
+    .room-hero .banner div{
+      height: 1px;
+    }
+    .room-hero .banner h1{
+        font-size: 1.8rem;
+        width: fit-content;
+    }
+
 }
 
 
@@ -387,7 +402,10 @@ font-size: 0.75rem;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    background: var(--baner-background);
+    color: var(--main-color);
     margin: 1rem;
+    padding: 0.5rem;
 }
 
 .services-center div h5{
@@ -395,6 +413,17 @@ font-size: 0.75rem;
     margin-bottom: 0.5rem;
     text-transform: capitalize;
     border-bottom: 0.2rem solid var(--main-color);
+}
+p.service-info{
+    width: 80%;
+}
+div.icon{
+    background: transparent;
+}
+.icon svg{
+  width: 50%;
+  height: 4vh;
+  color:var(--main-color);
 }
 
 .service-info{
@@ -410,4 +439,37 @@ font-size: 0.75rem;
     .services-center div{
         width: 100%;
     }
+}
+/*Featured Rooms*/
+
+
+.Featured{
+    padding: 5rem 0;
+  }
+  .featured-rooms-center {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 40px;
+  }
+/* Loading Gif*/
+
+.page-loading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    height: 40vh ;
+}
+
+.page-loading h3 {
+    font-size: medium;
+    height: 5vh;
+}
+
+.gif{
+    width: 8%;
+    height: 10vh;
 }

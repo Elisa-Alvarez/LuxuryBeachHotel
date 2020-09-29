@@ -70,8 +70,8 @@ class RoomProvider extends Component{
     }
      onChange = e => {
          const target = e.target
-         const name = e.target.name
-         const value = e.type === 'checkbox' ? target.checked : target.value
+         const name = target.name
+         const value = target.type === 'checkbox' ? target.checked : target.value
          this.setState({
            [name] : value
          },this.fillerSearch)
@@ -95,15 +95,19 @@ class RoomProvider extends Component{
         if (capacity !== 1){
           tempRooms = tempRooms.filter(room => room.capacity >= capacity)
         }
+        
       
         tempRooms = tempRooms.filter(room => room.price <= price)
         
         tempRooms = tempRooms.filter(room => room.size >= minSize && room.size <= maxSize)
 
-        tempRooms = tempRooms.filter(room => room.breakfast === true)
-
-        tempRooms = tempRooms.filter(room => room.pets === true )
-      
+        if (breakfast) {
+          tempRooms = tempRooms.filter(room => room.breakfast === true);
+        }
+       
+        if (pets) {
+          tempRooms = tempRooms.filter(room => room.pets === true);
+        }
 
         this.setState({
           sortedRooms:tempRooms

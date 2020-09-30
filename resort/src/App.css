@@ -454,6 +454,37 @@ div.icon{
     grid-row-gap: 2rem;
     grid-column-gap: 40px;
   }
+ .featured-rooms  .room-info{
+      text-transform: capitalize;
+      font-size: 2rem;
+      font-weight: bold;
+      text-decoration: underline;
+  }
+ .featured-rooms .image-container{
+ text-align: center;
+ position: relative;
+ font-size: 1.5rem;
+ 
+}
+.featured-rooms .image-container button{
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    font-size: 2rem;
+    width: fit-content;
+    cursor: pointer;;
+    color: var(--main-color);
+    font-style: italic;
+    font-family: var(--button-text);
+    background-color: rgba(192, 200, 201, 0.71);
+    border: 1px solid wheat ;
+   
+}
+
+.featured-rooms .image-container img{
+    width: 100%;
+    height: 40vh;
+  }
 /* Loading Gif*/
 
 .page-loading{
@@ -472,4 +503,89 @@ div.icon{
 .gif{
     width: 8%;
     height: 10vh;
+}
+
+/*Search Filter*/
+.filter-container {
+    padding: 5rem 0;
+  }
+  .filter-form {
+    width: 60vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 40px;
+  }
+  .form-group {
+    text-transform: capitalize;
+  }
+  .form-group label {
+    display: block;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 0.5rem;
+  }
+  .form-control {
+    width: 100%;
+    background: transparent;
+    font-size: 1rem;
+  }
+  .size-inputs {
+    display: flex;
+  }
+  .size-input {
+    width: 40%;
+    padding: 0.2rem;
+    border: 1px solid var(--mainBlack);
+    border-radius: 0.3rem;
+    margin-right: 0.3rem;
+  }
+  .single-extra label {
+    display: inline-block;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+  }
+
+/*Room List*/
+.sorted-rooms {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    
+}
+
+.sorted-rooms .room-info{
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.sorted-rooms .image-container{
+text-align: center;
+margin: auto;
+position: relative;
+font-size: 1.5rem;
+width: 50%;
+
+}
+.sorted-rooms .image-container img{
+    width: 50%;
+}
+.sorted-rooms .image-container button{
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  font-size: 2rem;
+  width: fit-content;
+  cursor: pointer;;
+  color: var(--main-color);
+  font-style: italic;
+  font-family: var(--button-text);
+  background-color: rgba(192, 200, 201, 0.71);
+  border: 1px solid wheat ;
+
+}
+.sorted-rooms .image-container img{
+  width: 75%;
+  height: 40vh;
 }

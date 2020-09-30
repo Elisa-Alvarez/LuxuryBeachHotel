@@ -11,7 +11,7 @@ class RoomProvider extends Component{
         featured:[],
         loading:true,
         type: 'all',
-        capacity: 1,
+        capacity: 0,
         price:0,
         minPrice:0,
         maxPrice:0,
@@ -37,10 +37,9 @@ class RoomProvider extends Component{
         featured,
         sortedRooms: rooms,
         loading: false,
-
         price: maxPrice,
         maxPrice,
-        maxSize
+        maxSize,
       });
     } catch (error) {
       console.log(error);
@@ -48,7 +47,7 @@ class RoomProvider extends Component{
   
   
   };
- 
+
   componentDidMount(){
     console.log(this.getData())
   }
@@ -71,8 +70,8 @@ class RoomProvider extends Component{
     }
      onChange = e => {
          const target = e.target
-         const name = e.target.name
-         const value = e.type === 'checkbox' ? target.checked : target.value
+         const name = target.name
+         const value = target.type === 'checkbox' ? target.checked : target.value
          this.setState({
            [name] : value
          },this.fillerSearch)
@@ -96,15 +95,19 @@ class RoomProvider extends Component{
         if (capacity !== 1){
           tempRooms = tempRooms.filter(room => room.capacity >= capacity)
         }
+        
       
         tempRooms = tempRooms.filter(room => room.price <= price)
         
         tempRooms = tempRooms.filter(room => room.size >= minSize && room.size <= maxSize)
 
-        tempRooms = tempRooms.filter(room => room.breakfast === true)
-
-        tempRooms = tempRooms.filter(room => room.pets === true )
-      
+        if (breakfast) {
+          tempRooms = tempRooms.filter(room => room.breakfast === true);
+        }
+       
+        if (pets) {
+          tempRooms = tempRooms.filter(room => room.pets === true);
+        }
 
         this.setState({
           sortedRooms:tempRooms

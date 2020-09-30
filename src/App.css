@@ -454,19 +454,19 @@ div.icon{
     grid-row-gap: 2rem;
     grid-column-gap: 40px;
   }
- .featured-rooms  .room-info{
+ .featured-rooms-center  .room-info{
       text-transform: capitalize;
       font-size: 2rem;
       font-weight: bold;
       text-decoration: underline;
   }
- .featured-rooms .image-container{
+ .featured-rooms-center .image-container{
  text-align: center;
  position: relative;
  font-size: 1.5rem;
  
 }
-.featured-rooms .image-container button{
+.featured-rooms-center .image-container button{
     position: absolute;
     top: 35%;
     left: 35%;
@@ -481,7 +481,7 @@ div.icon{
    
 }
 
-.featured-rooms .image-container img{
+.featured-rooms-center .image-container img{
     width: 100%;
     height: 40vh;
   }

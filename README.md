@@ -6,6 +6,8 @@ created with Create React App
 
 `cd resort` then once in the resort directory `npm start`
 
+**Deployed Version**  [Here](https://the-lux-resort.netlify.app/)
+
 ### Room Data
 
 All the Room data comes from the service contentful and was hand made for this project. Currently there are only 3 rooms 2 single and one double and all of them need more styling and better images added.

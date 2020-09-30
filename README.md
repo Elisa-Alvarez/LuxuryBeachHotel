@@ -1,11 +1,12 @@
 created with Create React App
 
-# Luxury Beach Hotel Website
-Made a clone beach hotel website original concept creator https://github.com/john-smilga/setup-files-react-beach-resort
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d409de6a-91ce-429c-a124-6fb69e01645b/deploy-status)](https://app.netlify.com/sites/the-lux-resort/deploys)
 
 ## To Veiw Application
 
 `cd resort` then once in the resort directory `npm start`
+
+**Deployed Version**  [Here](https://the-lux-resort.netlify.app/)
 
 ### Room Data
 
@@ -13,6 +14,6 @@ All the Room data comes from the service contentful and was hand made for this p
 
 ### For Future Updates
 
-Css needs to be added to the rooms page and the individual rooms themselves. In latter versions the plan is to add GSAP (Green Socks Animation) to the home and rooms page as well as material UI styling to the Search Filter.
+ In latter versions the plan is to add GSAP (Green Socks Animation) to the home and rooms page as well as material UI styling to the Search Filter.
 
 *Major Updates*: For a future realse of the application would include a bookings page as well as checkout functionality.

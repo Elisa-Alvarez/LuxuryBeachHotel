@@ -1,7 +1,5 @@
 created with Create React App
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d409de6a-91ce-429c-a124-6fb69e01645b/deploy-status)](https://app.netlify.com/sites/the-lux-resort/deploys)
-
 ## To Veiw Application
 
 `cd resort` then once in the resort directory `npm start`
